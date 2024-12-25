@@ -16,7 +16,7 @@ export class QuizService {
       {
         id: 2,
         question: 'Which of the following are student startups in SUTD?',
-        type: 'multi-select',
+        type: 'massive-multi-select',
         options: ['Startup 1', 'Startup 2', 'Startup 3', 'Startup 4', 'Startup 5', 'Startup 6', 'Startup 7', 'Startup 8'],
         correct: ['Startup 1', 'Startup 4', 'Startup 6'],
       },
@@ -36,7 +36,7 @@ export class QuizService {
       },
       {
         id: 5,
-        question: "What was SUTD's cat name (dead)?",
+        question: "What was SUTD's cat name?",
         type: 'text',
         correct: 'Jerry',
       },
@@ -58,7 +58,7 @@ export class QuizService {
       },
       {
         id: 7,
-        question: 'Around how many group submissions are there in the first year of studies alone?',
+        question: 'How many group submissions are there in the first year of studies alone?',
         type: 'single-choice',
         options: ['1-5', '6-10', '11-15', '15+'],
         correct: '15+',

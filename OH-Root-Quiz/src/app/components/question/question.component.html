@@ -1,33 +1,56 @@
 <div *ngIf="question">
-    <h3>{{ question.question }}</h3>
-  
-    <!-- Single Choice -->
-    <div *ngIf="question.type === 'single-choice'"  class="options-grid">
-      <div *ngFor="let option of question.options" class="option-item">
-        <input
-          type="radio"
-          [name]="'q' + question.id"
-          [value]="option"
-          [(ngModel)]="userAnswer"
-        />
-        {{ option }}
-      </div>
+  <h1 style="color:black;">Question {{question.id}}</h1>
+  <h2 style="font-weight:bold;">{{ question.question }}</h2>
+
+  <!-- Single Choice -->
+  <div *ngIf="question.type === 'single-choice'" class="options-grid">
+    <div *ngFor="let option of question.options">
+      <input
+        type="radio"
+        [name]="'q' + question.id"
+        [value]="option"
+        [(ngModel)]="userAnswer"
+        id="{{ 'option-' + question.id + '-' + option }}"
+      />
+      <label class="option-item" [for]="'option-' + question.id + '-' + option">
+        <div class="answer-text">{{ option }}</div>
+      </label>
     </div>
-  
-    <!-- Multiple Select -->
-    <div *ngIf="question.type === 'multi-select'">
-      <div *ngFor="let option of question.options">
-        <input
-          type="checkbox"
-          [value]="option"
-          (change)="onCheckboxChange($event)"
-        />
-        {{ option }}
-      </div>
+  </div>
+
+  <!-- Multiple Select -->
+  <div *ngIf="question.type === 'multi-select'">
+    <div *ngFor="let option of question.options">
+      <input
+        type="checkbox"
+        [value]="option"
+        (change)="onCheckboxChange($event)"
+        id="{{ 'option-' + question.id + '-' + option }}"
+      />
+      <label class="option-item my-1" [for]="'option-' + question.id + '-' + option">
+        <div class="answer-text">{{ option }}</div>
+      </label>
     </div>
-  
-    <!-- Text Input -->
-    <div *ngIf="question.type === 'text'">
-      <input type="text" [(ngModel)]="userAnswer" />
+  </div>
+
+  <!-- Text Input -->
+  <div *ngIf="question.type === 'text'">
+    <input type="text" [(ngModel)]="userAnswer" />
+  </div>
+</div>
+
+
+  <!-- Multiple Select Special -->
+  <div *ngIf="question.type === 'massive-multi-select'" class="massive-grid">
+    <div *ngFor="let option of question.options">
+      <input
+        type="checkbox"
+        [value]="option"
+        (change)="onCheckboxChange($event)"
+        id="{{ 'option-' + question.id + '-' + option }}"
+      />
+      <label class="option-item" [for]="'option-' + question.id + '-' + option">
+        <div class="answer-text">{{ option }}</div>
+      </label>
     </div>
   </div>
