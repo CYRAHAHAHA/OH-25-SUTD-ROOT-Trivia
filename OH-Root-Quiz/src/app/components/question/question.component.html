@@ -2,8 +2,8 @@
     <h3>{{ question.question }}</h3>
   
     <!-- Single Choice -->
-    <div *ngIf="question.type === 'single-choice'">
-      <div *ngFor="let option of question.options">
+    <div *ngIf="question.type === 'single-choice'"  class="options-grid">
+      <div *ngFor="let option of question.options" class="option-item">
         <input
           type="radio"
           [name]="'q' + question.id"
