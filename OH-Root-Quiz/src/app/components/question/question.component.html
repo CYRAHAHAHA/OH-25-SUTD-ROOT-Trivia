@@ -1,0 +1,33 @@
+<div *ngIf="question">
+    <h3>{{ question.question }}</h3>
+  
+    <!-- Single Choice -->
+    <div *ngIf="question.type === 'single-choice'">
+      <div *ngFor="let option of question.options">
+        <input
+          type="radio"
+          [name]="'q' + question.id"
+          [value]="option"
+          [(ngModel)]="userAnswer"
+        />
+        {{ option }}
+      </div>
+    </div>
+  
+    <!-- Multiple Select -->
+    <div *ngIf="question.type === 'multi-select'">
+      <div *ngFor="let option of question.options">
+        <input
+          type="checkbox"
+          [value]="option"
+          (change)="onCheckboxChange($event)"
+        />
+        {{ option }}
+      </div>
+    </div>
+  
+    <!-- Text Input -->
+    <div *ngIf="question.type === 'text'">
+      <input type="text" [(ngModel)]="userAnswer" />
+    </div>
+  </div>
