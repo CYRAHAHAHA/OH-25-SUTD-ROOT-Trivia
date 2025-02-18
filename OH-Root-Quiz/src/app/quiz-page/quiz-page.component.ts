@@ -19,6 +19,8 @@ export class QuizPageComponent {
 
   ngOnInit() {
     this.questions = this.quizService.getQuestions();
+    //scroll to top
+    window.scrollTo(0, 0);
   }
 
   updateAnswer(questionId: number, userAnswer: any) {
@@ -39,7 +41,10 @@ export class QuizPageComponent {
     }));
     console.log("Sending over, user answers: ", this.userAnswers);
     // Navigate to the results page and pass the user answers
-    this.router.navigateByUrl('/results', {
-      state: { report: this.userAnswers },
-    });  }
+    setTimeout(() => {
+      this.router.navigateByUrl('/results', {
+        state: { report: this.userAnswers },
+      });  
+    },220);
+  }
 }

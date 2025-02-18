@@ -12,6 +12,7 @@ export class QuizService {
         type: 'single-choice',
         options: ['Ong Jung Yi', 'Quah Zheng Wen', 'Joseph Schooling', 'Teong Tzen Wei'],
         correct: 'Ong Jung Yi',
+        footer: 'Ong Jung Yi graduated with the Class of 2024!'
       },
       {
         id: 2,
@@ -19,13 +20,15 @@ export class QuizService {
         type: 'massive-multi-select',
         options: ['TinyEqn', 'Uimagine', 'ObstaX', 'NexSwap', 'Zennah', 'Polymate', 'Glance.sg', 'Castomize', "Stick 'Em", 'Seaform', 'Noshinom', 'Acai Truck'],
         correct: ['TinyEqn', 'Uimagine', 'ObstaX', 'NexSwap', 'Zennah', 'Polymate', 'Glance.sg', 'Castomize', "Stick 'Em", 'Seaform', 'Noshinom', 'Acai Truck'],
+        footer: 'There are many more startups than listed here, and some of them are present to share about their work today!'
       },
       {
         id: 3,
-        question: 'What % of the Singapore Uni students population are SUTD students?',
+        question: 'What % of the population of Singapore university undergraduate students are SUTD students?',
         type: 'single-choice',
-        options: ['1%-2%', '2%-5%', '5%-7%', '7%-10%'],
-        correct: '2%-5%',
+        options: ['1%-3%', '3%-5%', '5%-7%', '7%-10%'],
+        correct: '1%-3%',
+        footer: "SUTD's undergraduate population is around 1600-2000 students, out of a total of roughly 77000-90000 students in all Singapore universities."
       },
       {
         id: 4,
@@ -33,6 +36,7 @@ export class QuizService {
         type: 'single-choice',
         options: ['Chicken', 'Coffee', 'Waffle', 'Tea'],
         correct: 'Chicken',
+        footer: "That vending machine only joined us very recently!"
       },
       {
         id: 5,
@@ -40,6 +44,7 @@ export class QuizService {
         type: 'massive-multi-select',
         options: ['Socks', 'Jonas', 'Whiskers', 'Danae', 'Jerry', 'Yirong', 'Grumpy', 'Lulu', 'Amanda'],
         correct: ['Jerry','Grumpy'],
+        footer: "Grumpy is a cat that our pioneer batches of alumnis had during their Dover Campus days, and Jerry was a recent addition who unfortunately passed in 2024.",
       },
       {
         id: 6,
@@ -56,6 +61,7 @@ export class QuizService {
           'Any student can independently use it after they clear the training lesson as a freshie',
           'The latest BAMBU printers are made available to all students regardless of module requirements.',
         ],
+        footer: 'The 3D printers are a great resource for students to print literally anything!'
       },
       {
         id: 7,
@@ -63,6 +69,7 @@ export class QuizService {
         type: 'single-choice',
         options: ['1-4', '5-8', '9-12', '13 and more'],
         correct: '13 and more',
+        footer: "Group submissions are a common occurrence in SUTD's curriculum, and are a great way to learn from your peers!"
       },
       {
         id: 8,
@@ -70,6 +77,7 @@ export class QuizService {
         type: 'massive-multi-select',
         options: ['Blender', 'Fusion360', 'Thingiverse', 'VS Code', 'Rhino 3D', 'Canva', 'Figma', 'Twinmotion', 'Arduino IDE', 'Jupyter Notebook', 'Adobe Photoshop', 'Adobe Illustrator'],
         correct: ['Blender', 'Fusion360', 'Thingiverse', 'VS Code', 'Rhino 3D', 'Canva', 'Figma', 'Twinmotion', 'Arduino IDE', 'Jupyter Notebook', 'Adobe Photoshop', 'Adobe Illustrator'],
+        footer: 'These applications are used in various modules and projects, and are great tools to learn and use! Choose 5 for the question.'
       },
       {
         id: 9,
@@ -77,6 +85,7 @@ export class QuizService {
         type: 'multi-select',
         options: ['Student Government', 'Servant Leadership', 'Community Empowerment', 'Fellow UG Students'],
         correct: ['Student Government', 'Servant Leadership', 'Community Empowerment', 'Fellow UG Students'],
+        footer: "That's us!",
       },
     ];
   }

@@ -1,0 +1,64 @@
+<div *ngIf="question">
+  <h1 style="color: black">Question {{ question.id }}</h1>
+  <h2 style="font-weight: bold">{{ question.question }}</h2>
+
+  <!-- Single Choice -->
+  <div *ngIf="question.type === 'single-choice'" class="options-grid">
+    <div *ngFor="let option of question.options">
+      <label
+        class="option-item button-test"
+        [for]="'option-' + question.id + '-' + option"
+        [ngClass]="{
+          'correct': isCorrect(option),
+          'wrong': !isCorrect(option)
+        }"
+      >
+        <div class="xs:text-xs text-md xs:px-1 answer-text">{{ option }}</div>
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Select -->
+  <div *ngIf="question.type === 'multi-select'">
+    <div *ngFor="let option of question.options">
+      <label
+        class="option-item my-1"
+        [for]="'option-' + question.id + '-' + option"
+        [ngClass]="{
+          'correct': isCorrect(option),
+          'wrong': !isCorrect(option)
+        }"
+      >
+        <div class="xs:text-xs text-md xs:px-0 answer-text">{{ option }}</div>
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Select Special -->
+  <div *ngIf="question.type === 'massive-multi-select'" class="massive-grid">
+    <div *ngFor="let option of question.options">
+      <label
+        class="option-item"
+        [for]="'option-' + question.id + '-' + option"
+        [ngClass]="{
+          'correct': isCorrect(option),
+          'wrong': !isCorrect(option)
+        }"
+      >
+        <div class="xs:text-xs text-md answer-text">{{ option }}</div>
+      </label>
+    </div>
+  </div>
+
+  <div
+    *ngIf="question.id === 2"
+    class="flex text-center justify-center items-center"
+  >
+    <a
+      class="text-xs italic underline mt-5"
+      href="https://www.sutdvie.com/startups-and-affiliates"
+      >Hint: SUTD VIE startup site!</a
+    >
+  </div>
+</div>
+<p class="mt-3 text-center italic text-black mt-2 text-xs">{{question.footer}}</p>

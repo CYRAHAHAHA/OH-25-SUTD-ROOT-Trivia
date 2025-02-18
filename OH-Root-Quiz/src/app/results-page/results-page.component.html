@@ -1,6 +1,8 @@
-<div class="results">
-    <h1>Your Score: {{ score }}</h1>
-    <div *ngFor="let answer of scoredQn">
-        <p>Question {{ answer.id }}: Your Answer: {{ answer.userAnswer }} - Correct Answer: {{ answer.correctAnswer }}</p>
-    </div>
+<h1 style="color: var(--main-color);" class="text-center font-bold">You've got {{ score }} out of 9 questions correct!</h1>
+<h4 class="mb-2 text-center">Here are the correct answers:</h4>
+<div *ngFor="let question of questions" class="p-2 w-full">
+    <app-question-review [question]="question" [scoredQn]="scoredQn"></app-question-review>
+</div>
+<div class="flex justify-center">
+    <button class="mt-2 mb-10 button-54" role="button" (click)="BackToHome()">Back To Home!</button>
 </div>
