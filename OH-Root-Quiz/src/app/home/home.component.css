@@ -1,14 +1,14 @@
 
 /* CSS */
 .button-54 {
-    font-size: 20px;
+    font-size: 1em;
     letter-spacing: 2px;
     text-decoration: none;
     text-transform: uppercase;
     color: #53001c;
     cursor: pointer;
     border: 5px solid #53001c;
-    padding: 0.25em 1em;
+    padding: 0.25em;
     box-shadow: 6px 6px 0px 0px #360012;
     position: relative;
     user-select: none;
@@ -23,4 +23,15 @@
     left: 6px;
     border-radius: 8px;
     background-color: var(--highlight-color);
+  }
+
+
+  .welcome-message {
+    font-size: 2em;
+    color: var(--main-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .text-x {
+    font-size: 1em;
   }
