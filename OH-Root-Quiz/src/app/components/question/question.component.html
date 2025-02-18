@@ -13,7 +13,7 @@
         id="{{ 'option-' + question.id + '-' + option }}"
       />
       <label class="option-item button-test" [for]="'option-' + question.id + '-' + option" (click)="playSound()">
-        <div class="answer-text">{{ option }}</div>
+        <div class="xs:text-xs text-md xs:px-1 answer-text">{{ option }}</div>
       </label>
     </div>
   </div>
@@ -28,7 +28,7 @@
         id="{{ 'option-' + question.id + '-' + option }}"
       />
       <label class="option-item my-1" [for]="'option-' + question.id + '-' + option" (click)="playSound()">
-        <div class="answer-text">{{ option }}</div>
+        <div class="xs:text-xs text-md xs:px-0 answer-text">{{ option }}</div>
       </label>
     </div>
   </div>
@@ -50,7 +50,7 @@
         id="{{ 'option-' + question.id + '-' + option }}"
       />
       <label class="option-item" [for]="'option-' + question.id + '-' + option" (click)="playSound()">
-        <div class="answer-text">{{ option }}</div>
+        <div class="xs:text-xs text-md answer-text">{{ option }}</div>
       </label>
     </div>
   </div>
