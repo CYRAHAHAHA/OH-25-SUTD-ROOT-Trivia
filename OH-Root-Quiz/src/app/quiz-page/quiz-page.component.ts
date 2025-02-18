@@ -29,18 +29,17 @@ export class QuizPageComponent {
   Submit() {
     const audio = new Audio('assets/btncut.mp3');
     audio.play()
-      .then(() => console.log('Audio playing...'))
       .catch(error => console.error('Error playing audio:', error));
 
     // Collect user answers
     this.userAnswers = this.questions.map(question => ({
       id: question.id,
-      userAnswer: question.userAnswer,
+      userAnswer: this.userAnswers[question.id],
       correctAnswer: question.correct
     }));
-
+    console.log("Sending over, user answers: ", this.userAnswers);
     // Navigate to the results page and pass the user answers
-    console.log(this.userAnswers);
-    // this.router.navigate(['/results'], { state: { userAnswers: this.userAnswers } });
-  }
+    this.router.navigateByUrl('/results', {
+      state: { report: this.userAnswers },
+    });  }
 }

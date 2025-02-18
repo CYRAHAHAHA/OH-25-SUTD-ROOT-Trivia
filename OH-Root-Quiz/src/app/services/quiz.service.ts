@@ -18,7 +18,7 @@ export class QuizService {
         question: 'Which of the following are student startups in SUTD?',
         type: 'massive-multi-select',
         options: ['TinyEqn', 'Uimagine', 'ObstaX', 'NexSwap', 'Zennah', 'Polymate', 'Glance.sg', 'Castomize', "Stick 'Em", 'Seaform', 'Noshinom', 'Acai Truck'],
-        correct: ['Startup 1', 'Startup 4', 'Startup 6'],
+        correct: ['TinyEqn', 'Uimagine', 'ObstaX', 'NexSwap', 'Zennah', 'Polymate', 'Glance.sg', 'Castomize', "Stick 'Em", 'Seaform', 'Noshinom', 'Acai Truck'],
       },
       {
         id: 3,
@@ -39,7 +39,7 @@ export class QuizService {
         question: "What were the name of SUTD's cat(s)?",
         type: 'massive-multi-select',
         options: ['Socks', 'Jonas', 'Whiskers', 'Danae', 'Jerry', 'Yirong', 'Grumpy', 'Lulu', 'Amanda'],
-        correct: 'Jerry',
+        correct: ['Jerry','Grumpy'],
       },
       {
         id: 6,
@@ -62,14 +62,14 @@ export class QuizService {
         question: 'How many group submissions are there in the first year of studies alone?',
         type: 'single-choice',
         options: ['1-4', '5-8', '9-12', '13 and more'],
-        correct: '15+',
+        correct: '13 and more',
       },
       {
         id: 8,
         question: 'Select 5 different applications/websites used/useful for SUTD students in the first year.',
         type: 'massive-multi-select',
         options: ['Blender', 'Fusion360', 'Thingiverse', 'VS Code', 'Rhino 3D', 'Canva', 'Figma', 'Twinmotion', 'Arduino IDE', 'Jupyter Notebook', 'Adobe Photoshop', 'Adobe Illustrator'],
-        correct: ['Blender', 'Adobe Photoshop', 'Fusion360', 'Thingiverse', 'VS Code', 'Rhino 3D', 'Adobe Illustrator', 'Canva', 'Figma', 'Twinmotion', 'Arduino IDE', 'Jupyter Notebook'],
+        correct: ['Blender', 'Fusion360', 'Thingiverse', 'VS Code', 'Rhino 3D', 'Canva', 'Figma', 'Twinmotion', 'Arduino IDE', 'Jupyter Notebook', 'Adobe Photoshop', 'Adobe Illustrator'],
       },
       {
         id: 9,
