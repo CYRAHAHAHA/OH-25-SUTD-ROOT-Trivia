@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -11,12 +11,12 @@ import { FormsModule } from '@angular/forms';
 })
 export class QuestionComponent {
   @Input() question: any;
+  @Output() answerChange = new EventEmitter<any>();
   userAnswer: any = null;
 
   playSound() {
     const audio = new Audio('assets/btncut.mp3');
     audio.play()
-      .then(() => console.log('Audio playing...'))
       .catch(error => console.error('Error playing audio:', error));
   }
 
@@ -28,5 +28,14 @@ export class QuestionComponent {
     } else {
       this.userAnswer = this.userAnswer.filter((ans: any) => ans !== event.target.value);
     }
+    this.answerChange.emit(this.userAnswer);
+  }
+
+  onRadioChange() {
+    this.answerChange.emit(this.userAnswer);
+  }
+
+  onTextChange() {
+    this.answerChange.emit(this.userAnswer);
   }
 }

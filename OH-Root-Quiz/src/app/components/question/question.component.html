@@ -10,6 +10,7 @@
         [name]="'q' + question.id"
         [value]="option"
         [(ngModel)]="userAnswer"
+        (change)="onRadioChange()"
         id="{{ 'option-' + question.id + '-' + option }}"
       />
       <label class="option-item button-test" [for]="'option-' + question.id + '-' + option" (click)="playSound()">
@@ -33,13 +34,6 @@
     </div>
   </div>
 
-  <!-- Text Input -->
-  <div *ngIf="question.type === 'text'">
-    <input type="text" [(ngModel)]="userAnswer" />
-  </div>
-</div>
-
-
   <!-- Multiple Select Special -->
   <div *ngIf="question.type === 'massive-multi-select'" class="massive-grid">
     <div *ngFor="let option of question.options">
@@ -58,3 +52,7 @@
   <div *ngIf="question.id === 2" class="flex text-center justify-center items-center">
     <a class="text-xs italic underline mt-5" href="https://www.sutdvie.com/startups-and-affiliates">Hint: SUTD VIE startup site!</a>
   </div>
+</div>
+
+
+

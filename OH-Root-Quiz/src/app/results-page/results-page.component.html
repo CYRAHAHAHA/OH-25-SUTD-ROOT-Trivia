@@ -1,1 +1,6 @@
-<p>results-page works!</p>
+<div class="results">
+    <h1>Your Score: {{ score }}</h1>
+    <div *ngFor="let answer of userAnswers">
+      <p>Question {{ answer.id }}: Your Answer: {{ answer.userAnswer }} - Correct Answer: {{ answer.correctAnswer }}</p>
+    </div>
+  </div>
