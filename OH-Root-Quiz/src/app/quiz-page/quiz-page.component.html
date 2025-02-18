@@ -1,3 +1,6 @@
-<div *ngFor="let question of questions" class="p-2">
-    <app-question [question]="question"></app-question>
+<div class="flex flex-col justify-center items-center max-w-[800px] px-2">
+    <div *ngFor="let question of questions" class="py-2 w-full">
+        <app-question [question]="question"></app-question>
+    </div>
+    <button class="mt-2 mb-10 button-54" role="button" (click)="playSound()">Submit!</button>
 </div>

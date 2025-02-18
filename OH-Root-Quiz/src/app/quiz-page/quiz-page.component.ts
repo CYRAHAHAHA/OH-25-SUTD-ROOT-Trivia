@@ -18,4 +18,11 @@ export class QuizPageComponent {
   ngOnInit() {
     this.questions = this.quizService.getQuestions();
   }
+
+  playSound() {
+    const audio = new Audio('assets/btncut.mp3');
+    audio.play()
+      .then(() => console.log('Audio playing...'))
+      .catch(error => console.error('Error playing audio:', error));
+  }
 }
