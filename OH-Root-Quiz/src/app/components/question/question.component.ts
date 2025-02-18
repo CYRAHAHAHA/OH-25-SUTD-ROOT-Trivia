@@ -13,6 +13,14 @@ export class QuestionComponent {
   @Input() question: any;
   userAnswer: any = null;
 
+  playSound() {
+    const audio = new Audio('assets/btncut.mp3');
+    audio.play()
+      .then(() => console.log('Audio playing...'))
+      .catch(error => console.error('Error playing audio:', error));
+  }
+
+
   onCheckboxChange(event: any) {
     if (!this.userAnswer) this.userAnswer = [];
     if (event.target.checked) {

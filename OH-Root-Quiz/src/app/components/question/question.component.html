@@ -12,7 +12,7 @@
         [(ngModel)]="userAnswer"
         id="{{ 'option-' + question.id + '-' + option }}"
       />
-      <label class="option-item button-test" [for]="'option-' + question.id + '-' + option">
+      <label class="option-item button-test" [for]="'option-' + question.id + '-' + option" (click)="playSound()">
         <div class="answer-text">{{ option }}</div>
       </label>
     </div>
@@ -27,7 +27,7 @@
         (change)="onCheckboxChange($event)"
         id="{{ 'option-' + question.id + '-' + option }}"
       />
-      <label class="option-item my-1" [for]="'option-' + question.id + '-' + option">
+      <label class="option-item my-1" [for]="'option-' + question.id + '-' + option" (click)="playSound()">
         <div class="answer-text">{{ option }}</div>
       </label>
     </div>
@@ -49,7 +49,7 @@
         (change)="onCheckboxChange($event)"
         id="{{ 'option-' + question.id + '-' + option }}"
       />
-      <label class="option-item" [for]="'option-' + question.id + '-' + option">
+      <label class="option-item" [for]="'option-' + question.id + '-' + option" (click)="playSound()">
         <div class="answer-text">{{ option }}</div>
       </label>
     </div>
