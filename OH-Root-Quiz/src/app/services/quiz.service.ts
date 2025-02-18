@@ -65,7 +65,7 @@ export class QuizService {
       },
       {
         id: 8,
-        question: 'Name 8 different applications/websites used/useful for SUTD students in the first year.',
+        question: 'Name 5 different applications/websites used/useful for SUTD students in the first year.',
         type: 'text',
         correct: null,
       },
